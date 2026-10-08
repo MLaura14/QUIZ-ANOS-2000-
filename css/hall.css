@@ -1,0 +1,486 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    font-family:'Poppins', sans-serif;
+
+    color:white;
+
+    background:#09070f;
+
+    overflow-x:hidden;
+
+}
+
+
+/* =========================
+VÍDEO
+========================= */
+
+
+#bg-video{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:-5;
+
+    filter:
+    blur(1.5px)
+    brightness(0.50)
+    saturate(1.05);
+
+    transform:scale(1.03);
+
+    animation:
+    videoReveal 2.2s ease forwards;
+
+}
+
+
+.video-blur{
+
+    position:fixed;
+
+    inset:0;
+
+    backdrop-filter:blur(2px);
+
+    z-index:-4;
+
+}
+
+
+.hall-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-3;
+
+    background:
+
+    radial-gradient(
+        circle at 15% 20%,
+        rgba(208,98,169,0.10),
+        transparent 27%
+    ),
+
+    radial-gradient(
+        circle at 85% 70%,
+        rgba(4,133,207,0.09),
+        transparent 29%
+    ),
+
+    linear-gradient(
+        135deg,
+        rgba(8,5,16,0.68),
+        rgba(13,8,24,0.73)
+    );
+
+}
+
+
+/* =========================
+PARTÍCULAS
+========================= */
+
+.particles::before,
+.particles::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+    opacity:0.20;
+
+    pointer-events:none;
+
+    z-index:-2;
+
+    animation:
+    hallFloat 9s ease-in-out infinite alternate;
+
+}
+
+
+.particles::before{
+
+    background:#d062a9;
+
+    top:5%;
+    left:-110px;
+
+}
+
+
+.particles::after{
+
+    background:#0485cf;
+
+    bottom:0;
+    right:-110px;
+
+    animation-delay:2s;
+
+}
+
+
+/* =========================
+CURSOR
+========================= */
+
+.cursor-glow{
+
+    position:fixed;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    z-index:-1;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,255,255,0.10),
+        rgba(255,79,216,0.025) 40%,
+        transparent 68%
+    );
+
+}
+
+
+/* =========================
+CONTAINER
+========================= */
+
+.hall-container{
+
+    width:min(1450px,94%);
+
+    margin:auto;
+
+    padding:50px 0 70px;
+
+}
+
+
+/* =========================
+HEADER
+========================= */
+
+.hall-header{
+
+    display:grid;
+
+    grid-template-columns:
+    0.85fr
+    1.15fr;
+
+    align-items:center;
+
+    gap:35px;
+
+    margin-bottom:35px;
+
+}
+
+
+.header-text{
+
+    animation:
+    entranceLeft 1s ease;
+
+}
+
+
+.eyebrow{
+
+    display:inline-block;
+
+    margin-bottom:14px;
+
+    color:#ff7cda;
+
+    font-size:0.85rem;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-shadow:
+    0 0 10px rgba(255,124,218,0.55);
+
+}
+
+
+.header-text h1{
+
+    position:relative;
+
+    font-size:clamp(3.5rem,7vw,7rem);
+
+    line-height:0.85;
+
+    font-weight:900;
+
+    letter-spacing:-4px;
+
+    text-shadow:
+    0 0 18px rgba(255,255,255,0.10);
+
+    animation:
+    titlePulse 4s ease-in-out infinite alternate;
+
+}
+
+
+.header-text h1 span{
+
+    display:block;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ffffff,
+        #ff72d5,
+        #9b65ff,
+        #55dfff,
+        #ffffff
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:
+    gradientHall 5s linear infinite;
+
+}
+
+
+.header-text p{
+
+    margin-top:22px;
+
+    color:#d7d1df;
+
+    font-size:1.05rem;
+
+}
+
+
+/* =========================
+CHARACTER WALL
+========================= */
+
+.character-wall{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:10px;
+
+    padding:18px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,0.065),
+        rgba(255,79,216,0.025),
+        rgba(85,223,255,0.025)
+    );
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,0.25),
+    0 0 30px rgba(255,79,216,0.06);
+
+    animation:
+    entranceRight 1s ease;
+
+}
+
+
+.wall-character{
+
+    position:relative;
+
+    height:110px;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    transition:
+    transform 0.45s,
+    box-shadow 0.45s,
+    border-color 0.45s;
+
+    animation:
+    wallEntrance 0.8s both;
+
+}
+
+
+.wall-character:nth-child(1){
+    animation-delay:0.10s;
+}
+
+.wall-character:nth-child(2){
+    animation-delay:0.16s;
+}
+
+.wall-character:nth-child(3){
+    animation-delay:0.22s;
+}
+
+.wall-character:nth-child(4){
+    animation-delay:0.28s;
+}
+
+.wall-character:nth-child(5){
+    animation-delay:0.34s;
+}
+
+.wall-character:nth-child(6){
+    animation-delay:0.40s;
+}
+
+.wall-character:nth-child(7){
+    animation-delay:0.46s;
+}
+
+.wall-character:nth-child(8){
+    animation-delay:0.52s;
+}
+
+.wall-character:nth-child(9){
+    animation-delay:0.58s;
+}
+
+.wall-character:nth-child(10){
+    animation-delay:0.64s;
+}
+
+
+.wall-character img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+    transform 0.6s,
+    filter 0.6s;
+
+}
+
+
+.wall-character::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,0.65),
+        transparent 60%
+    );
+
+}
+
+
+.wall-character span{
+
+    position:absolute;
+
+    z-index:2;
+
+    bottom:8px;
+    left:10px;
+
+    font-size:0.72rem;
+    font-weight:700;
+
+    text-shadow:
+    0 2px 6px rgba(0,0,0,0.8);
+
+}
+
+
+.wall-character:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.045);
+
+    z-index:3;
+
+    border-color:#ff72d5;
+
+    box-shadow:
+    0 0 15px rgba(255,79,216,0.45),
+    0 0 30px rgba(85,223,255,0.18);
+
+}
+
+
+.wall-character:hover img{
+
+    transform:scale(1.12);
+
+    filter:
+    saturate(1.25)
+    brightness(1.08);
+
+}
+

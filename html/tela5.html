@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz ANOS 2000 • Tela 2</title>
+
+    <link rel="stylesheet" href="../css/tela5.css">
+    <link rel="stylesheet" href="../css/visual.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/paginas.css">
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Background blobs -->
+
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+    <div class="bg-shape shape3"></div>
+
+    <!-- Cursor -->
+
+    <div class="cursor-glow"></div>
+
+    <!-- Partículas -->
+
+    <div class="particles"></div>
+
+    <!-- Conteúdo -->
+
+    <main class="quiz-container">
+
+        <!-- Progress -->
+
+        <section class="top-area fade-up">
+
+            <div class="progress-info">
+
+                <span class="mini-title">
+                    💿 QUIZ ANOS 2000
+                </span>
+
+                <span class="progress-text">
+                    Pergunta 7-8 de 8
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div class="progress-fill"></div>
+
+            </div>
+
+        </section>
+
+         <div class="quiz-wrapper">
+
+        <!-- Card -->
+
+        <section class="quiz-card fade-scale">
+            
+
+           <!-- Pergunta 7 -->
+
+<div class="question-box slide-left">
+
+    <span class="question-number">
+        Pergunta 7
+    </span>
+
+    <h1 class="question">
+        Qual desses quartos parece mais sua energia?
+    </h1>
+
+    <div class="room-options">
+
+        <button class="room-card" onclick="somarPontos(['regina','clover'])">
+            <img src="../img/quarto1.jpg">
+
+            <span>
+                ✨ Neon, espelhos e roupas espalhadas.
+            </span>
+        </button>
+
+        <button class="room-card" onclick="somarPontos(['stitch','scooby'])">
+            <img src="../img/quarto2.jpg">
+
+            <span>
+                🧸 Confortável, bagunçado e divertido.
+            </span>
+        </button>
+
+        <button class="room-card" onclick="somarPontos(['sam','alex','lindinha'])">
+            <img src="../img/quarto3.jpg">
+
+            <span>
+                🖥️ Organizado e cheio de detalhes inteligentes.
+            </span>
+        </button>
+
+        <button class="room-card" onclick="somarPontos(['docinho','mcqueen','superchoque'])">
+            <img src="../img/quarto4.jpg">
+
+            <span>
+                🔥 Forte, moderno e cheio de personalidade.
+            </span>
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Pergunta 8 -->
+
+<div class="question-box slide-right">
+
+    <span class="question-number">
+        Pergunta 8
+    </span>
+
+    <h1 class="question">
+        Qual dessas qualidades você mais valoriza?
+    </h1>
+
+    <div class="options">
+
+        <button class="option" onclick="somarPontos(['stitch','mcqueen'])">
+            🕊️ Liberdade.
+        </button>
+
+        <button class="option" onclick="somarPontos(['scooby','lindinha'])">
+            🤝 Lealdade.
+        </button>
+
+        <button class="option" onclick="somarPontos(['regina','clover'])">
+            👑 Reconhecimento.
+        </button>
+
+        <button class="option" onclick="somarPontos(['sam','alex','superchoque'])">
+            📈 Evolução pessoal.
+        </button>
+
+    </div>
+
+</div>
+
+            <!-- Botão -->
+              <p class="erro-msg">
+           ⚠️ Responda as duas perguntas antes de continuar.
+          </p>
+
+           <div class="button-area fade-up">
+
+    <a href="login.html" class="next-btn">
+        CONTINUAR
+    </a>
+
+</div>
+
+        </section>
+
+<!-- PERSONAGEM -->
+
+<div class="visual-area">
+
+    <img
+    src="../img/stitch.png"
+    class="main-character">
+</div>
+</div>
+</main>
+<script src="../js/json.js"></script>
+<script src="../js/telas.js"></script>
+
+</body>
+</html>

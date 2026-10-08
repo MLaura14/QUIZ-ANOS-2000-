@@ -1,0 +1,1640 @@
+/* =========================
+CONTROLES
+========================= */
+
+.section-controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin:20px auto 45px;
+
+    padding:8px;
+
+    width:max-content;
+
+    max-width:100%;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.055);
+
+    border:1px solid rgba(255,255,255,0.10);
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,0.18);
+
+}
+
+
+.section-btn{
+
+    border:none;
+
+    padding:13px 22px;
+
+    border-radius:14px;
+
+    background:transparent;
+
+    color:#aaa4b3;
+
+    font-family:inherit;
+
+    font-weight:700;
+
+    font-size:0.8rem;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:0.35s;
+
+}
+
+
+.section-btn:hover{
+
+    color:white;
+
+    transform:
+    translateY(-3px)
+    scale(1.02);
+
+    text-shadow:
+    0 0 8px #55dfff;
+
+}
+
+
+.section-btn.active{
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(208,98,169,0.35),
+        rgba(156,108,255,0.30),
+        rgba(4,133,207,0.30)
+    );
+
+    box-shadow:
+    0 0 20px rgba(208,98,169,0.20),
+    inset 0 0 15px rgba(255,255,255,0.04);
+
+}
+
+
+/* =========================
+SEÇÕES
+========================= */
+
+.hall-section{
+
+    display:none;
+
+    opacity:0;
+
+}
+
+
+.hall-section.active{
+
+    display:block;
+
+    animation:
+    sectionEntrance 0.7s ease forwards;
+
+}
+
+
+.section-title{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+    margin-bottom:30px;
+
+}
+
+
+.section-title > span{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    width:46px;
+    height:46px;
+
+    flex-shrink:0;
+
+    border-radius:14px;
+
+    color:#ff7cda;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(208,98,169,0.14),
+        rgba(85,223,255,0.08)
+    );
+
+    border:1px solid rgba(208,98,169,0.30);
+
+    font-weight:800;
+
+    box-shadow:
+    0 0 18px rgba(255,79,216,0.12);
+
+}
+
+
+.section-title h2{
+
+    font-size:clamp(1.7rem,3vw,2.6rem);
+
+    line-height:1.1;
+
+}
+
+
+.section-title p{
+
+    margin-top:7px;
+
+    color:#aaa4b3;
+
+}
+
+/* =========================
+   POPULAR
+========================= */
+
+.popular-layout{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:25px;
+    margin-bottom:25px;
+}
+
+
+/* =========================
+   CARD PRINCIPAL
+========================= */
+
+.popular-card{
+    min-height:380px;
+
+    position:relative;
+    overflow:hidden;
+
+    display:grid;
+
+    /* FOTO DE UM LADO + INFORMAÇÕES DO OUTRO */
+    grid-template-columns:210px 1fr;
+
+    align-items:center;
+
+    gap:35px;
+
+    padding:25px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,0.18);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.13),
+            rgba(255,255,255,0.04)
+        );
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.25);
+
+    animation:popularEntrance 0.8s ease;
+}
+
+
+.popular-card:hover{
+    transform:translateY(-8px);
+
+    border-color:
+        rgba(255,114,213,0.50);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.35),
+        0 0 30px rgba(255,79,216,0.15);
+}
+
+
+/* =========================
+   MOLDURA DA IMAGEM
+========================= */
+
+.popular-card > img{
+    position:relative !important;
+
+    width:200px !important;
+    height:300px !important;
+
+    min-width:200px;
+    max-width:200px;
+
+    min-height:300px;
+    max-height:300px;
+
+    display:block;
+
+    /*
+       IGUAL À FOTO DA PÁGINA
+       DE RESULTADO
+    */
+    padding:8px;
+
+    box-sizing:border-box;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e13b2b,
+            #d062a9,
+            #0485cf,
+            #8c52ff
+        );
+
+    border:none;
+
+    box-shadow:
+        0 0 20px rgba(225,59,43,0.35),
+        0 0 40px rgba(208,98,169,0.30),
+        0 0 60px rgba(4,133,207,0.25),
+        0 0 90px rgba(140,82,255,0.20);
+
+    z-index:3;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.popular-card:hover > img{
+    transform:
+        scale(1.03)
+        rotate(-1deg);
+
+    box-shadow:
+        0 0 25px rgba(225,59,43,0.45),
+        0 0 50px rgba(208,98,169,0.40),
+        0 0 75px rgba(4,133,207,0.30);
+}
+
+
+/* =========================
+   INFORMAÇÕES AO LADO
+========================= */
+
+.popular-info{
+    position:relative !important;
+
+    left:auto !important;
+    right:auto !important;
+    bottom:auto !important;
+
+    z-index:4;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    min-height:300px;
+
+    width:100%;
+
+    padding:
+        10px
+        45px
+        10px
+        0;
+}
+
+
+/* ESTRELAS DECORATIVAS */
+
+.popular-info::before{
+    content:"✦  ✧  ✦  ✧  ✦";
+
+    display:block;
+
+    margin-bottom:18px;
+
+    font-size:1.1rem;
+
+    letter-spacing:6px;
+
+    color:#55dfff;
+
+    opacity:0.85;
+
+    text-shadow:
+        0 0 8px #55dfff,
+        0 0 18px rgba(85,223,255,0.6);
+}
+
+
+/* =========================
+   ETIQUETA
+========================= */
+
+.popular-tag{
+    display:inline-block;
+
+    width:max-content;
+
+    padding:7px 12px;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,79,216,0.20),
+            rgba(85,223,255,0.16)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.14);
+
+    backdrop-filter:blur(6px);
+
+    font-size:0.7rem;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================
+   NOME
+========================= */
+
+.popular-info h3{
+    margin-top:12px;
+
+    font-size:2.1rem;
+
+    line-height:1.05;
+
+    font-weight:900;
+
+    text-shadow:
+        0 0 15px rgba(255,255,255,0.15);
+}
+
+
+/* =========================
+   INFORMAÇÕES AO LADO
+========================= */
+
+.popular-info{
+    position:relative !important;
+
+    left:auto !important;
+    right:auto !important;
+    bottom:auto !important;
+
+    z-index:4;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    min-height:300px;
+
+    width:100%;
+
+    padding:
+        10px
+        50px
+        10px
+        0;
+}
+
+
+/* ESTRELAS */
+
+.popular-info::before{
+    content:"✦  ✧  ✦  ✧  ✦";
+
+    display:block;
+
+    margin-bottom:18px;
+
+    font-size:1.1rem;
+
+    letter-spacing:6px;
+
+    color:#ff55b8;
+
+    opacity:0.85;
+
+    text-shadow:
+        0 0 8px #55dfff,
+        0 0 18px rgba(85,223,255,0.6);
+}
+
+
+/* =========================
+   ETIQUETA
+========================= */
+
+.popular-tag{
+    display:inline-block;
+
+    width:max-content;
+
+    padding:7px 12px;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,79,216,0.20),
+            rgba(85,223,255,0.16)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.14);
+
+    backdrop-filter:blur(6px);
+
+    font-size:0.7rem;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================
+   NOME
+========================= */
+
+.popular-info h3{
+    margin-top:12px;
+
+    font-size:2.1rem;
+
+    line-height:1.05;
+
+    font-weight:900;
+
+    text-shadow:
+        0 0 15px rgba(255,255,255,0.15);
+}
+
+
+/* =========================
+   DESCRIÇÃO
+========================= */
+
+.popular-info p{
+    color:#ddd;
+
+    max-width:420px;
+
+    margin-top:10px;
+
+    line-height:1.6;
+}
+
+
+/* =========================
+   CONTADOR
+========================= */
+
+.popular-score{
+    position:absolute;
+
+    top:20px;
+    right:20px;
+
+    z-index:5;
+
+    min-width:90px;
+
+    padding:10px 14px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border:
+        1px solid rgba(255,255,255,0.16);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.18);
+}
+
+
+.popular-score strong{
+    display:block;
+
+    font-size:1.6rem;
+
+    color:#55dfff;
+
+    text-shadow:
+        0 0 10px rgba(85,223,255,0.65);
+}
+
+
+.popular-score span{
+    font-size:0.65rem;
+
+    color:#bbb;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width:700px){
+
+    .popular-card{
+        grid-template-columns:1fr;
+
+        justify-items:center;
+
+        gap:20px;
+
+        padding:20px;
+    }
+
+
+    .popular-card > img{
+        width:180px !important;
+        height:270px !important;
+
+        min-width:180px;
+        max-width:180px;
+
+        min-height:270px;
+        max-height:270px;
+    }
+
+
+    .popular-info{
+        min-height:auto;
+
+        width:100%;
+
+        padding:10px;
+
+        text-align:center;
+
+        align-items:center;
+    }
+
+
+    .popular-info p{
+        max-width:100%;
+    }
+
+
+    .popular-score{
+        top:15px;
+        right:15px;
+    }
+
+}
+/* =========================
+   OUTROS PERSONAGENS
+========================= */
+
+.popular-side{
+    display:grid;
+
+    gap:15px;
+}
+
+
+.mini-character-card{
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    min-height:125px;
+
+    padding:15px;
+
+    border-radius:25px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    border:
+        1px solid rgba(255,255,255,0.10);
+
+    backdrop-filter:blur(8px);
+
+    transition:
+        0.45s;
+}
+
+
+.mini-character-card:hover{
+    transform:
+        translateX(8px)
+        scale(1.02);
+
+    border-color:
+        rgba(85,223,255,0.42);
+
+    box-shadow:
+        0 0 25px rgba(85,223,255,0.12);
+}
+
+
+.mini-character-card img{
+    width:85px;
+
+    height:95px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    flex-shrink:0;
+
+    transition:
+        transform 0.4s,
+        filter 0.4s;
+}
+
+
+.mini-character-card:hover img{
+    transform:scale(1.06);
+
+    filter:saturate(1.2);
+}
+
+
+.mini-character-info{
+    flex:1;
+}
+
+
+.mini-character-info h4{
+    font-size:1rem;
+}
+
+
+.mini-character-info span{
+    color:#aaa;
+
+    font-size:0.75rem;
+}
+
+
+.mini-bar{
+    width:100%;
+
+    height:6px;
+
+    margin-top:9px;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    overflow:hidden;
+}
+
+
+.mini-bar span{
+    display:block;
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d062a9,
+            #9c6cff,
+            #55dfff
+        );
+
+    box-shadow:
+        0 0 10px rgba(85,223,255,0.35);
+
+    transition:
+        width 1s ease;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width:1100px){
+
+    .popular-layout{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:700px){
+
+    .popular-card{
+        grid-template-columns:1fr;
+
+        justify-items:center;
+
+        gap:20px;
+
+        padding:20px;
+    }
+
+
+    .popular-card img{
+        width:170px !important;
+
+        height:270px !important;
+
+        min-width:170px;
+
+        max-width:170px;
+
+        min-height:270px;
+
+        max-height:270px;
+    }
+
+
+    .popular-info{
+        min-height:auto;
+
+        width:100%;
+
+        padding:10px;
+
+        text-align:center;
+
+        align-items:center;
+    }
+
+
+    .popular-info p{
+        max-width:100%;
+    }
+
+
+    .popular-score{
+        top:15px;
+
+        right:15px;
+    }
+
+
+    .popular-side{
+        grid-template-columns:1fr;
+    }
+
+}
+
+.mini-character-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    min-height:125px;
+
+    padding:15px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.07);
+
+    border:1px solid rgba(255,255,255,0.10);
+
+    backdrop-filter:blur(8px);
+
+    transition:
+    0.45s;
+
+}
+
+
+.mini-character-card:hover{
+
+    transform:
+    translateX(8px)
+    scale(1.02);
+
+    border-color:
+    rgba(85,223,255,0.42);
+
+    box-shadow:
+    0 0 25px rgba(85,223,255,0.12);
+
+}
+
+
+.mini-character-card img{
+
+    width:85px;
+    height:95px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    flex-shrink:0;
+
+    transition:
+    transform 0.4s,
+    filter 0.4s;
+
+}
+
+
+.mini-character-card:hover img{
+
+    transform:scale(1.06);
+
+    filter:saturate(1.2);
+
+}
+
+
+.mini-character-info{
+
+    flex:1;
+
+}
+
+
+.mini-character-info h4{
+
+    font-size:1rem;
+
+}
+
+
+.mini-character-info span{
+
+    color:#aaa;
+
+    font-size:0.75rem;
+
+}
+
+
+.mini-bar{
+
+    width:100%;
+
+    height:6px;
+
+    margin-top:9px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.08);
+
+    overflow:hidden;
+
+}
+
+
+.mini-bar span{
+
+    display:block;
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #d062a9,
+        #9c6cff,
+        #55dfff
+    );
+
+    box-shadow:
+    0 0 10px rgba(85,223,255,0.35);
+
+    transition:
+    width 1s ease;
+
+}
+
+
+/* =========================
+CHARACTER STATS
+========================= */
+
+.character-stats{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:15px;
+
+}
+
+
+.character-stat{
+
+    padding:20px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,0.055);
+
+    border:1px solid rgba(255,255,255,0.09);
+
+    transition:0.4s;
+
+}
+
+
+.character-stat:hover{
+
+    transform:
+    translateY(-7px)
+    scale(1.02);
+
+    background:
+    rgba(255,79,216,0.07);
+
+    border-color:
+    rgba(255,114,213,0.35);
+
+    box-shadow:
+    0 10px 30px rgba(255,79,216,0.10);
+
+}
+
+
+.character-stat .stat-name{
+
+    font-weight:700;
+
+}
+
+
+.character-stat .stat-number{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:1.8rem;
+
+    font-weight:900;
+
+    color:#55dfff;
+
+    text-shadow:
+    0 0 10px rgba(85,223,255,0.35);
+
+}
+
+/* =========================
+PADRONIZAÇÃO DAS IMAGENS
+========================= */
+
+/* PAINEL DE PERSONAGENS */
+
+.wall-character img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center;
+
+}
+
+
+/* PERSONAGEM MAIS POPULAR */
+
+.popular-main{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+
+.popular-main img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center;
+
+}
+
+
+/* MINI PERSONAGENS */
+
+.mini-character-card img{
+
+    width:85px;
+    height:95px;
+
+    object-fit:cover;
+    object-position:center;
+
+    flex-shrink:0;
+
+}
+
+
+/* AVATAR DO RANKING */
+
+.player-avatar{
+
+    width:60px;
+    height:60px;
+
+    flex-shrink:0;
+
+    object-fit:cover;
+    object-position:center;
+
+    border-radius:18px;
+
+}
+
+/* =========================
+POPULAR — ORGANIZAÇÃO
+========================= */
+
+.popular-layout{
+
+    display:grid;
+
+    grid-template-columns:
+    1.25fr
+    0.75fr;
+
+    gap:20px;
+
+    align-items:stretch;
+
+}
+
+
+/* PERSONAGEM PRINCIPAL */
+
+.popular-card{
+
+    min-height:430px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,0.13);
+
+    background:
+    rgba(255,255,255,0.055);
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+.popular-card img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center 20%;
+
+}
+
+
+.popular-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(5,3,10,0.97),
+        rgba(5,3,10,0.45) 45%,
+        rgba(5,3,10,0.05) 75%
+    );
+
+    pointer-events:none;
+
+}
+
+
+/* INFORMAÇÕES DO PRINCIPAL */
+
+.popular-info{
+
+    position:absolute;
+
+    z-index:2;
+
+    left:28px;
+    right:28px;
+    bottom:28px;
+
+}
+
+
+.popular-info h3{
+
+    margin-top:9px;
+
+    font-size:
+    clamp(2rem,3vw,3rem);
+
+    font-weight:900;
+
+}
+
+
+.popular-info p{
+
+    max-width:500px;
+
+    margin-top:7px;
+
+    color:#d5d0dc;
+
+    font-size:0.88rem;
+
+}
+
+
+.popular-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:7px 12px;
+
+    border-radius:12px;
+
+    background:
+    rgba(0,0,0,0.32);
+
+    border:
+    1px solid rgba(255,255,255,0.14);
+
+    backdrop-filter:blur(8px);
+
+    font-size:0.68rem;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+}
+
+
+/* PONTUAÇÃO DO PRINCIPAL */
+
+.popular-score{
+
+    position:absolute;
+
+    z-index:3;
+
+    top:20px;
+    right:20px;
+
+    min-width:78px;
+
+    padding:11px 14px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    background:
+    rgba(5,3,10,0.48);
+
+    border:
+    1px solid rgba(255,255,255,0.14);
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+.popular-score strong{
+
+    display:block;
+
+    font-size:1.45rem;
+
+    color:#55dfff;
+
+}
+
+
+.popular-score span{
+
+    display:block;
+
+    margin-top:2px;
+
+    color:#aaa;
+
+    font-size:0.58rem;
+
+    letter-spacing:1px;
+
+}
+
+
+/* =========================
+OUTROS PERSONAGENS
+========================= */
+
+.popular-side{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:12px;
+
+}
+
+
+.mini-character-card{
+
+    min-height:0;
+
+    height:100%;
+
+    padding:13px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:13px;
+
+    border-radius:22px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,0.075),
+        rgba(255,255,255,0.035)
+    );
+
+    border:
+    1px solid rgba(255,255,255,0.10);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+    inset 0 0 20px rgba(255,255,255,0.015),
+    0 10px 30px rgba(0,0,0,0.12);
+
+    transition:
+    transform 0.35s,
+    border-color 0.35s,
+    box-shadow 0.35s;
+
+}
+
+
+.mini-character-card:hover{
+
+    transform:
+    translateX(5px)
+    scale(1.015);
+
+    border-color:
+    rgba(85,223,255,0.35);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.20),
+    0 0 20px rgba(85,223,255,0.08);
+
+}
+
+
+.mini-character-card img{
+
+    width:65px;
+    height:65px;
+
+    flex-shrink:0;
+
+    object-fit:cover;
+    object-position:center;
+
+    border-radius:17px;
+
+    border:
+    1px solid rgba(255,255,255,0.12);
+
+}
+
+
+.mini-character-info{
+
+    min-width:0;
+
+    flex:1;
+
+}
+
+
+.mini-character-info h4{
+
+    margin-bottom:2px;
+
+    font-size:0.92rem;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+
+.mini-character-info span{
+
+    color:#aaa;
+
+    font-size:0.68rem;
+
+}
+
+
+.mini-bar{
+
+    width:100%;
+
+    height:4px;
+
+    margin-top:7px;
+
+    border-radius:10px;
+
+    background:
+    rgba(255,255,255,0.07);
+
+    overflow:hidden;
+
+}
+
+
+.mini-bar span{
+
+    display:block;
+
+    height:100%;
+
+    border-radius:10px;
+
+    transition:width 0.8s ease;
+
+}
+
+
+/* =========================
+ESTATÍSTICAS DOS PERSONAGENS
+========================= */
+
+.character-stats{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:12px;
+
+    margin-top:20px;
+
+}
+
+
+.character-stat{
+
+    padding:16px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,0.065),
+        rgba(255,79,216,0.025)
+    );
+
+    border:
+    1px solid rgba(255,255,255,0.09);
+
+    backdrop-filter:blur(10px);
+
+    transition:
+    transform 0.35s,
+    border-color 0.35s;
+
+}
+
+
+.character-stat:hover{
+
+    transform:translateY(-5px);
+
+    border-color:
+    rgba(255,114,213,0.35);
+
+}
+
+
+.character-stat-top{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+.stat-dot{
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    flex-shrink:0;
+
+}
+
+
+.character-stat .stat-name{
+
+    font-size:0.75rem;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+
+.character-stat .stat-number{
+
+    display:block;
+
+    margin-top:9px;
+
+    font-size:1.7rem;
+
+    font-weight:900;
+
+    color:#55dfff;
+
+}
+
+
+.character-stat-label{
+
+    display:block;
+
+    margin-top:-3px;
+
+    color:#888;
+
+    font-size:0.63rem;
+
+}
+
+
+.character-stat-bar{
+
+    width:100%;
+
+    height:4px;
+
+    margin-top:12px;
+
+    border-radius:10px;
+
+    background:
+    rgba(255,255,255,0.07);
+
+    overflow:hidden;
+
+}
+
+
+.character-stat-bar span{
+
+    display:block;
+
+    height:100%;
+
+    border-radius:10px;
+
+}
+
+.popular-layout{
+    grid-template-columns:1fr;
+}
+
+.popular-side{
+    grid-template-columns:
+    repeat(2,1fr);
+}
+
+.character-stats{
+    grid-template-columns:
+    repeat(3,1fr);
+}

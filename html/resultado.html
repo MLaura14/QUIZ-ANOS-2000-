@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seu Resultado • Quiz ANOS 2000</title>
+
+    <link rel="stylesheet" href="../css/resultado.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+<body>
+
+    <!-- VÍDEO FUNDO -->
+
+    <video autoplay muted loop id="bg-video">
+
+        <source
+            src="../video/QUIZ!.mp4"
+            type="video/mp4"
+        >
+
+    </video>
+
+
+    <div class="overlay"></div>
+
+
+    <!-- BOLHAS -->
+
+    <div class="bg-shape shape1"></div>
+
+    <div class="bg-shape shape2"></div>
+
+
+    <!-- CURSOR -->
+
+    <div class="cursor-glow"></div>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="container">
+
+        <section class="result-card">
+
+
+            <!-- TEXTO -->
+
+            <div class="result-info">
+
+                <span class="mini-title">
+                    ✨ RESULTADO FINAL
+                </span>
+
+
+                <h1 class="result-title">
+
+                    <span id="nomeUsuario"></span>,
+
+                    você seria
+
+                    <span id="personagemNome"></span>!
+
+                </h1>
+
+
+                <p
+                    class="result-description"
+                    id="descricaoPersonagem"
+                ></p>
+
+
+                <!-- CHAMADA PARA O HALL -->
+
+                <div class="hall-message">
+
+                    <span>
+                        💿 SUA HISTÓRIA NÃO TERMINA AQUI
+                    </span>
+
+                    <p>
+                        Descubra quem dominou os anos 2000,
+                        veja o ranking dos jogadores e compare
+                        seu resultado com os outros participantes.
+                    </p>
+
+                </div>
+
+
+                <!-- ÚNICO BOTÃO -->
+
+                <div class="buttons">
+
+                    <a
+                        href="hall.html"
+                        class="hall-btn"
+                    >
+
+                        🏆 VER HALL DA FAMA
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- VISUAL -->
+
+            <div class="visual-side">
+
+                <div class="character-glow"></div>
+
+
+                <img
+                    id="imagemPersonagem"
+                    class="character-img"
+                >
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/json.js"></script>
+
+    <script src="../js/resultado.js"></script>
+
+
+</body>
+
+</html>

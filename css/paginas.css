@@ -1,0 +1,61 @@
+.erro-msg{
+
+    display:none;
+
+    margin-top:20px;
+
+    color:#ff5f5f;
+
+    font-weight:700;
+
+    text-align:center;
+
+    text-shadow:
+    0 0 10px #ff5f5f,
+    0 0 20px #ff5f5f,
+    0 0 30px #ff5f5f;
+}
+
+@keyframes shake{
+
+    0%{transform:translateX(0);}
+    25%{transform:translateX(-6px);}
+    50%{transform:translateX(6px);}
+    75%{transform:translateX(-6px);}
+    100%{transform:translateX(0);}
+
+}
+
+.shake{
+
+    animation:
+    shake .4s ease;
+
+}
+@keyframes warningJump{
+
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+    30%{
+        transform:translateY(-12px);
+    }
+
+    60%{
+        transform:translateY(4px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.warning-animation{
+
+    animation:
+    warningJump .6s ease;
+
+}

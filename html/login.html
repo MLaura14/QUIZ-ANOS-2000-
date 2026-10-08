@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz ANOS 2000 • Cadastro</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <video autoplay muted loop id="bg-video">
+        <source src="../video/QUIZ!.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="particles"></div>
+
+    <div class="cursor-glow"></div>
+
+    <main class="container">
+
+        <div class="glass-card login-card">
+
+            <h1 class="title">
+
+                <span class="word1">Ficha</span>
+                <span class="word2">De</span>
+                <span class="word3">Cadastro</span>
+
+            </h1>
+
+            <p class="subtitle">
+                Antes de descobrir seu resultado, precisamos registrar sua energia nostálgica ✨
+            </p>
+
+            <form id="cadastroForm">
+
+                <div class="input-area">
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome">
+                </div>
+
+                <div class="input-area">
+                    <input type="email" name="email" id="email" placeholder="Seu email">
+                </div>
+
+                <div class="input-area">
+                    <input type="text" name="endereco" id="endereco" placeholder="Seu endereço">
+                </div>
+
+                <div class="input-area">
+
+                    <select name="estado" id="estado">
+
+                        <option value="">Selecione seu estado</option>
+
+                        <option value="SP">SP</option>
+                        <option value="MG">MG</option>
+                        <option value="RJ">RJ</option>
+                        <option value="AM">AM</option>
+                        <option value="ES">ES</option>
+                        <option value="RO">RO</option>
+                        <option value="PI">PI</option>
+                        <option value="AL">AL</option>
+                        <option value="PE">PE</option>
+                        <option value="MT">MT</option>
+                        <option value="AC">AC</option>
+
+                    </select>
+
+                </div>
+
+                <div class="sexo-area">
+
+                    <label class="sexo-option">
+                        <input type="radio" name="sexo" value="MASC">
+                        Masculino
+                    </label>
+
+                    <label class="sexo-option">
+                        <input type="radio" name="sexo" value="FEM">
+                        Feminino
+                    </label>
+
+                    <label class="sexo-option">
+                        <input type="radio" name="sexo" value="OUTROS">
+                        Outros
+                    </label>
+
+                </div>
+
+                <button type="button" class="result-btn" id="salvarBtn">
+                    SALVAR ✨
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="../js/json.js"></script>
+    <script src="../js/login.js"></script>
+
+</body>
+</html>

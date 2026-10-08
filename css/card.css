@@ -1,0 +1,180 @@
+/* =========================
+WRAPPER GERAL
+========================= */
+
+.quiz-wrapper{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+}
+/* =========================
+CARD ESQUERDO
+========================= */
+
+.quiz-card{
+
+    width:72%;
+    
+    margin-left:-30px;
+
+    max-width:1100px;
+
+    background:rgba(255,255,255,0.10);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:35px;
+
+    padding:45px 40px;
+
+    box-shadow:
+    0 0 20px rgba(208,98,169,0.2),
+    0 0 40px rgba(4,133,207,0.15);
+
+    animation:cardFloat 4s ease-in-out infinite;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.left-side{
+
+    width:100%;
+}
+
+.quiz-container{
+
+    overflow:visible;
+     width:95%;
+    max-width:none;
+}
+
+/* Perguntas */
+
+.question-box{
+
+    margin-bottom:45px;
+}
+
+.question-number{
+
+    display:inline-block;
+
+    margin-bottom:15px;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.4);
+
+    font-size:0.9rem;
+
+    font-weight:600;
+
+    color:#8c52ff;
+}
+
+.question{
+
+    font-size:2rem;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+    color:white;
+
+    text-shadow:
+    0 0 10px rgba(140,82,255,0.3);
+}
+
+/* QUARTOS */
+
+.room-options{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+}
+
+.room-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:none;
+
+    border-radius:28px;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,0.08);
+
+    border:2px solid rgba(255,255,255,0.15);
+
+    transition:0.4s;
+
+    backdrop-filter:blur(10px);
+
+    padding:0;
+}
+
+.room-card img{
+
+    width:100%;
+
+    height:210px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.room-card span{
+
+    display:block;
+
+    padding:18px;
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    text-align:left;
+}
+
+.room-card:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.02);
+
+    box-shadow:
+    0 0 20px #d062a9,
+    0 0 35px #8c52ff;
+}
+
+.room-card.active{
+
+    border:2px solid white;
+
+    box-shadow:
+    0 0 20px #ff4fd8,
+    0 0 40px #8c52ff;
+}

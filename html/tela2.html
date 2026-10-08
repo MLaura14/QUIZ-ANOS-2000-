@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz ANOS 2000 • Tela 2</title>
+
+    <link rel="stylesheet" href="../css/tela2.css">
+    <link rel="stylesheet" href="../css/visual.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/paginas.css">
+
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Background blobs -->
+
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+    <div class="bg-shape shape3"></div>
+
+    <!-- Cursor -->
+
+    <div class="cursor-glow"></div>
+
+    <!-- Partículas -->
+
+    <div class="particles"></div>
+
+    <!-- Conteúdo -->
+
+    <main class="quiz-container">
+
+        <!-- Progress -->
+
+        <section class="top-area fade-up">
+
+            <div class="progress-info">
+
+                <span class="mini-title">
+                    💿 QUIZ ANOS 2000
+                </span>
+
+                <span class="progress-text">
+                    Pergunta 1-2 de 8
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div class="progress-fill"></div>
+
+            </div>
+
+        </section>
+
+         <div class="quiz-wrapper">
+
+        <!-- Card -->
+
+        <section class="quiz-card fade-scale">
+            
+
+            <!-- Pergunta 1 -->
+
+            <div class="question-box slide-left">
+
+                <span class="question-number">
+                    Pergunta 1
+                </span>
+
+                <h1 class="question">
+                    Qual energia mais combina com você em um sábado à noite?
+                </h1>
+
+                <div class="options">
+
+                    <button class="option" onclick="somarPontos(['regina','clover'])">
+                        🎉 Música alta, pessoas por perto e zero tempo pra tédio.
+                    </button>
+
+                    <button class="option" onclick="somarPontos(['stitch','scooby'])">
+                        🌌 Sumir do mapa e viver uma aventura aleatória.
+                    </button>
+
+                    <button class="option" onclick="somarPontos(['sam','alex'])">
+                        📚 Fazer algo produtivo mas ainda divertido.
+                    </button>
+
+                    <button class="option" onclick="somarPontos(['mcqueen','docinho'])">
+                        🏁 Entrar numa competição só pela adrenalina.
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Pergunta 2 -->
+
+            <div class="question-box slide-right">
+
+                <span class="question-number">
+                    Pergunta 2
+                </span>
+
+                <h1 class="question">
+                    Escolha uma estética que te representa:
+                </h1>
+
+                <div class="options">
+
+                    <button class="option" onclick="somarPontos(['regina','clover'])">
+                        💿 Glitter, flash da câmera e tendência antes de virar moda.
+                    </button>
+
+                    <button class="option" onclick="somarPontos(['stitch','superchoque'])">
+                        ⚡ Caos organizado e personalidade forte.
+                    </button>
+
+                    <button class="option" onclick="somarPontos(['lindinha','alex'])">
+                        ☁️ Minimalismo confortável e vibe tranquila.
+                    </button>
+
+                   <button class="option" onclick="somarPontos(['sam','mcqueen','docinho'])">
+                        🔥 Algo funcional, intenso e marcante.
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Botão -->
+<p class="erro-msg">
+    ⚠️ Responda as duas perguntas antes de continuar.
+</p>
+
+           <div class="button-area fade-up">
+
+    <a href="tela3.html" class="next-btn">
+        CONTINUAR
+    </a>
+
+</div>
+
+        </section>
+
+<!-- PERSONAGEM -->
+
+<div class="visual-area">
+
+    <img
+    src="../img/clover (2).png"
+    class="main-character">
+</div>
+</div>
+</main>
+<script src="../js/json.js"></script>
+<script src="../js/telas.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz ANOS 2000 • Confirmação</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/confirmacao.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <video autoplay muted loop id="bg-video">
+        <source src="../video/QUIZ!.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="particles"></div>
+
+    <div class="cursor-glow"></div>
+
+    <main class="container">
+
+        <div class="glass-card confirmacao-card">
+
+            <h1 class="title">
+
+                <span class="word1">Confirme</span>
+                <span class="word2">Seus</span>
+                <span class="word3">Dados</span>
+
+            </h1>
+
+            <p class="subtitle">
+                Confira suas informações antes de revelar seu resultado ✨
+            </p>
+
+            <div class="dados">
+
+                <div class="info-item">
+                    <strong>Nome:</strong>
+                    <span id="nomeSpan"></span>
+                </div>
+
+                <div class="info-item">
+                    <strong>Email:</strong>
+                    <span id="emailSpan"></span>
+                </div>
+
+                <div class="info-item">
+                    <strong>Endereço:</strong>
+                    <span id="enderecoSpan"></span>
+                </div>
+
+                <div class="info-item">
+                    <strong>Estado:</strong>
+                    <span id="estadoSpan"></span>
+                </div>
+
+                <div class="info-item">
+                    <strong>Sexo:</strong>
+                    <span id="sexoSpan"></span>
+                </div>
+
+            </div>
+
+            <div class="botoes">
+
+                <button class="print-btn" id="imprimirBtn">
+                    🖨 IMPRIMIR
+                </button>
+
+                <a href="resultado.html">
+
+                    <button class="result-btn">
+                        VER MEU RESULTADO ✨
+                    </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="../js/json.js"></script>
+    <script src="../js/confirmacao.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Hall da Fama • Quiz ANOS 2000</title>
+
+
+    <link
+       rel="stylesheet"
+        href="../css/hall.css"
+    >
+
+    <link
+       rel="stylesheet"
+        href="../css/hall2.css"
+    >
+
+    <link
+       rel="stylesheet"
+        href="../css/hall3.css"
+    >
+
+    <link
+       rel="stylesheet"
+        href="../css/hallCRUD.css"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- VÍDEO -->
+
+    <video
+        autoplay
+        muted
+        loop
+        id="bg-video"
+    >
+
+        <source
+            src="../video/QUIZ!.mp4"
+            type="video/mp4"
+        >
+
+    </video>
+
+
+    <div class="video-blur"></div>
+
+    <div class="hall-overlay"></div>
+
+
+    <!-- EFEITOS -->
+
+    <div class="particles"></div>
+
+    <div class="cursor-glow"></div>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="hall-container">
+
+
+        <!-- HEADER -->
+
+        <header class="hall-header">
+
+            <div class="header-text">
+
+                <span class="eyebrow">
+                    ✦ QUIZ ANOS 2000
+                </span>
+
+
+                <h1>
+                    HALL
+                    <span>DA FAMA</span>
+                </h1>
+
+
+                <p>
+                    Onde os resultados entram para a história!!!
+                </p>
+
+            </div>
+
+
+            <!-- PAINEL DE PERSONAGENS -->
+
+            <div
+                class="character-wall"
+                id="characterWall"
+            ></div>
+
+        </header>
+
+
+        <!-- CONTROLES -->
+
+        <div class="section-controls">
+
+            <button
+                class="section-btn active"
+                data-section="popular"
+            >
+                ✦ POPULAR
+            </button>
+
+
+            <button
+                class="section-btn"
+                data-section="stats"
+            >
+                ◈ ESTATÍSTICAS
+            </button>
+
+
+            <button
+                class="section-btn"
+                data-section="ranking"
+            >
+                ★ RANKING
+            </button>
+
+        </div>
+
+
+        <!-- =====================
+        SEÇÃO POPULAR
+        ===================== -->
+
+        <section
+            class="hall-section active"
+            id="popular"
+        >
+
+            <div class="section-title">
+
+                <span>
+                    01
+                </span>
+
+                <div>
+
+                    <h2>
+                        QUEM DOMINOU OS ANOS 2000?
+                    </h2>
+
+                    <p>
+                        O personagem que mais apareceu
+                        nos resultados recentes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="popular-layout"
+                id="popularContent"
+            ></div>
+
+
+            <div
+                class="character-stats"
+                id="characterStats"
+            ></div>
+
+        </section>
+
+
+        <!-- =====================
+        SEÇÃO ESTATÍSTICAS
+        ===================== -->
+
+        <section
+            class="hall-section"
+            id="stats"
+        >
+
+            <div class="section-title">
+
+                <span>
+                    02
+                </span>
+
+                <div>
+
+                    <h2>
+                        O QUIZ EM NÚMEROS
+                    </h2>
+
+                    <p>
+                        Os números por trás da nostalgia!
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="stats-grid"
+                id="statsGrid"
+            ></div>
+
+
+            <div class="extra-dashboard">
+
+                <div class="dashboard-card">
+
+                    <span>
+                        PERSONAGEM MAIS ESCOLHIDO
+                    </span>
+
+                    <strong
+                        id="dashboardCharacter"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <span>
+                        MAIOR PONTUAÇÃO
+                    </span>
+
+                    <strong
+                        id="dashboardScore"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+        RANKING
+        ===================== -->
+
+        <section
+            class="hall-section"
+            id="ranking"
+        >
+
+            <div class="section-title">
+
+                <span>
+                    03
+                </span>
+
+                <div>
+
+                    <h2>
+                        RANKING DOS JOGADORES
+                    </h2>
+
+                    <p>
+                        Quem deixou sua marca na história?
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="ranking-list"
+                id="rankingList"
+            ></div>
+
+
+            <div class="ranking-end">
+
+                <p>
+                    Quer tentar de novo e mudar
+                    seu lugar na história?
+                </p>
+
+
+                <a
+                    href="../index.html"
+                    class="restart-hall-btn"
+                >
+
+                    💿 REFAZER O QUIZ
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="../js/json.js"></script>
+
+    <script src="../js/hall.js"></script>
+
+    <script src="../js/hall2.js"></script> 
+
+    <script src="../js/funcoeshall.js"></script>
+
+
+</body>
+
+</html>
